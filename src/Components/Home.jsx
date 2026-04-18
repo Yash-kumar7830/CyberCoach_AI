@@ -368,6 +368,10 @@ const handleScan = async (e) => {
                 className="px-6 py-3 rounded-lg text-sm font-semibold text-gray-900 bg-green-400 hover:bg-green-300 transition-all duration-200 active:scale-95 shadow-lg shadow-green-900/30">
                 Take the quiz
               </Link>
+              <Link to="/extension"
+                className="px-6 py-3 rounded-lg text-sm font-semibold text-green-400 border border-green-400/25 bg-green-400/5 hover:bg-green-400/10 transition-all duration-200 active:scale-95">
+                Download extension
+              </Link>
               <Link to="/dashboard"
                 className="px-6 py-3 rounded-lg text-sm font-medium text-gray-300 border border-gray-700/60 hover:border-green-400/30 hover:text-white transition-all duration-200">
                 View dashboard

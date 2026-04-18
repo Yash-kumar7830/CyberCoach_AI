@@ -52,7 +52,7 @@ export default function Header() {
             <img
               src={logo}
               alt="CyberCoach AI logo"
-              className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-110"
+              className="h-10 w-10 rounded-full object-cover bg-white/5 p-1 ring-1 ring-green-400/20 transition-transform duration-300 group-hover:scale-110"
             />
             <span className="font-bold text-lg tracking-tight text-white">
               Cyber<span className="text-green-400">Coach</span>

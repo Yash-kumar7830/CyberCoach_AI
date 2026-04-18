@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 360px;
+  min-height: 480px;
+  background:
+    radial-gradient(circle at top, rgba(74, 222, 128, 0.12), transparent 36%),
+    linear-gradient(180deg, #0a0f1a 0%, #050814 100%);
+  color: #f3f4f6;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.popup-shell {
+  padding: 18px;
+}
+
+.hero {
+  margin-bottom: 14px;
+}
+
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-logo-wrap {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(74, 222, 128, 0.18);
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.06);
+}
+
+.hero-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 999px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #4ade80;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.subcopy {
+  margin: 8px 0 0;
+  color: #9ca3af;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.scanner,
+.result {
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 16px;
+  padding: 14px;
+  backdrop-filter: blur(12px);
+}
+
+.scanner {
+  margin-bottom: 12px;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(2, 6, 23, 0.7);
+  color: #f8fafc;
+  border-radius: 12px;
+  padding: 12px 12px;
+  font-size: 13px;
+  outline: none;
+}
+
+input:focus {
+  border-color: rgba(74, 222, 128, 0.55);
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.12);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+button,
+.footer-link {
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+button:hover,
+.footer-link:hover {
+  transform: translateY(-1px);
+}
+
+.primary {
+  background: #4ade80;
+  color: #05110a;
+  font-weight: 700;
+  padding: 11px 12px;
+}
+
+.secondary {
+  background: rgba(15, 23, 42, 0.94);
+  color: #e5e7eb;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  font-weight: 600;
+  padding: 11px 12px;
+}
+
+.status {
+  margin: 10px 0 0;
+  min-height: 18px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.result.hidden {
+  display: none;
+}
+
+.result-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(74, 222, 128, 0.12);
+  color: #4ade80;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pill.warning {
+  background: rgba(251, 191, 36, 0.12);
+  color: #fbbf24;
+}
+
+.pill.danger {
+  background: rgba(248, 113, 113, 0.12);
+  color: #f87171;
+}
+
+.score {
+  font-size: 26px;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.summary {
+  margin: 10px 0 0;
+  color: #e5e7eb;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.flags {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flags li {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  color: #cbd5e1;
+  font-size: 12px;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.meta-grid > div {
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.meta-label {
+  display: block;
+  color: #64748b;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  color: #e5e7eb;
+  font-size: 12px;
+}
+
+.footer-link {
+  display: inline-flex;
+  margin-top: 10px;
+  color: #4ade80;
+  font-size: 12px;
+}

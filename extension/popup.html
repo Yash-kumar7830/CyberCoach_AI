@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberCoach AI Scanner</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup-shell">
+      <section class="hero">
+        <div class="hero-brand">
+          <div class="hero-logo-wrap">
+            <img class="hero-logo" src="logo.png" alt="CyberCoach AI logo" />
+          </div>
+          <div>
+            <p class="eyebrow">CyberCoach AI</p>
+            <h1>Scan a link before you open it</h1>
+          </div>
+        </div>
+        <p class="subcopy">Paste any URL or scan your current tab directly from the extension.</p>
+      </section>
+
+      <section class="scanner">
+        <label class="field-label" for="url-input">URL</label>
+        <input id="url-input" type="url" placeholder="https://example.com" autocomplete="off" spellcheck="false" />
+
+        <div class="actions">
+          <button id="scan-current" type="button" class="secondary">Use current tab</button>
+          <button id="scan-url" type="button" class="primary">Scan now</button>
+        </div>
+
+        <p id="status" class="status">Ready to scan.</p>
+      </section>
+
+      <section id="result" class="result hidden" aria-live="polite">
+        <div class="result-head">
+          <span id="risk-pill" class="pill">Safe</span>
+          <span id="score" class="score">--</span>
+        </div>
+        <p id="summary" class="summary"></p>
+        <ul id="flags" class="flags"></ul>
+        <div class="meta-grid">
+          <div>
+            <span class="meta-label">SSL</span>
+            <span id="ssl" class="meta-value">--</span>
+          </div>
+          <div>
+            <span class="meta-label">Domain age</span>
+            <span id="domain-age" class="meta-value">--</span>
+          </div>
+        </div>
+      </section>
+
+      <a class="footer-link" href="http://localhost:5173/extension" target="_blank" rel="noreferrer">Open install guide</a>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

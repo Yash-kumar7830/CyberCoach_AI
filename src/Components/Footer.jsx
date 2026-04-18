@@ -18,7 +18,7 @@ const LINKS = {
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Use",   path: "/terms" },
     { name: "Cookie Policy",  path: "/cookies" },
-    { name: "Security",       path: "/security" },
+    { name: "Security Practices", path: "/security" },
   ],
 };
 
@@ -62,7 +62,7 @@ export default function Footer() {
               <img
                 src={logo}
                 alt="CyberCoach AI"
-                className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-110"
+                className="h-10 w-10 rounded-full object-cover bg-white/5 p-1 ring-1 ring-green-400/20 transition-transform duration-300 group-hover:scale-110"
               />
               <span
                 className="font-bold text-lg tracking-tight text-white"
@@ -90,7 +90,6 @@ export default function Footer() {
                 >
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
                     stroke={s.isPath ? "none" : "currentColor"}
-                    fill={s.isPath ? "currentColor" : "none"}
                     strokeWidth="1.8"
                     strokeLinecap="round"
                     strokeLinejoin="round"

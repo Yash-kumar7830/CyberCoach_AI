@@ -7,6 +7,8 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 // In App.jsx
 import ExtensionSetup from './Components/ExtensionSetup';
+import PrivacyPolicy from './Components/PrivacyPolicy';
+import SecurityPractices from './Components/SecurityPractices';
 
 // Add to your routes
 
@@ -20,6 +22,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/detector" element={<Detector />} />
         <Route path="/extension" element={<ExtensionSetup />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/security" element={<SecurityPractices />} />
 
         
       </Routes>
