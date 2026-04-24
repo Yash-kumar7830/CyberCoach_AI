@@ -6,10 +6,11 @@ export default function Header() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isLoggedIn, ] = useState(() => localStorage.getItem("isLoggedIn") === "true");
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Quiz", path: "/quiz/general" },
+    { name: "Trainings", path: "/rolebased-trainings/general" },
     { name: "Dashboard", path: "/dashboard" },
     { name: "Settings", path: "/extension" },  // ← Points to your extension route
   ];
@@ -84,12 +85,14 @@ export default function Header() {
           {/* Right side */}
           <div className="flex items-center gap-3">
             {/* Login — desktop only */}
-            <Link
-              to="/login"
-              className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-gray-900 bg-green-400 hover:bg-green-300 active:scale-95 transition-all duration-200 shadow-md shadow-green-900/30 hover:shadow-green-400/20"
-            >
-              Log in
-            </Link>
+            {!isLoggedIn && (
+              <Link
+                to="/login"
+                className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-gray-900 bg-green-400 hover:bg-green-300 active:scale-95 transition-all duration-200 shadow-md shadow-green-900/30 hover:shadow-green-400/20"
+              >
+                Log in
+              </Link>
+            )}
 
             {/* Hamburger — mobile only */}
             <button

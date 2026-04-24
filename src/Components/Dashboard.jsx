@@ -60,7 +60,7 @@ export default function BasicDashboard() {
           </div>
 
           {/* user profile card */}
-          <div className="rounded-xl border border-green-400/20 bg-gradient-to-br from-green-400/5 to-gray-900/80 p-6 mb-6 fade-up">
+          <div className="rounded-xl border border-green-400/20 bg-linear-to-br from-green-400/5 to-gray-900/80 p-6 mb-6 fade-up">
             <div className="flex items-start justify-between">
               <div>
                 <div className="flex items-center gap-2 mb-1">

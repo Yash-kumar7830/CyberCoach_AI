@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
-import Quiz from "./Components/Quiz";
+import RolebasedTrainings from "./Components/RolebasedTrainings";
+import Login from "./Components/Login";
 import Dashboard from "./Components/Dashboard";
-import Detector from "./Components/Detector";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 // In App.jsx
@@ -18,9 +18,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/quiz/:role" element={<Quiz />} />
+        <Route path="/rolebased-trainings/:role" element={<RolebasedTrainings />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/detector" element={<Detector />} />
         <Route path="/extension" element={<ExtensionSetup />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/security" element={<SecurityPractices />} />

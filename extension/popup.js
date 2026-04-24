@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/classify";
+const API_URL = "http://localhost:5000/api/v2/classify";
 
 const urlInput = document.getElementById("url-input");
 const scanCurrentButton = document.getElementById("scan-current");

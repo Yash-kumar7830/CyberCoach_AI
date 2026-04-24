@@ -4,7 +4,7 @@ import logo from "../assets/logo.png"; // update path as needed
 const LINKS = {
   Product: [
     { name: "URL Scanner",    path: "/" },
-    { name: "Threat Quiz",    path: "/quiz/general" },
+    { name: "Rolebased Trainings",    path: "/rolebased-trainings/general" },
     { name: "Dashboard",      path: "/dashboard" },
     { name: "Pricing",        path: "/pricing" },
   ],

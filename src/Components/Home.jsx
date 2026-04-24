@@ -48,7 +48,7 @@ const SERVICES = [
   {
     icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
     title: "Security Training",
-    desc: "Gamified cyber-awareness quizzes and simulations that turn every team member into your first line of defence.",
+    desc: "Gamified cyber-awareness trainings and simulations that turn every team member into your first line of defence.",
     tag: "Education",
     tagColor: "text-teal-400 bg-teal-400/10 border-teal-400/20",
   },
@@ -95,7 +95,7 @@ const handleScan = async (e) => {
 
   try {
     // Change this to your local backend
-    const res = await fetch("http://localhost:5000/api/classify", {
+    const res = await fetch("http://localhost:5000/api/v2/classify", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json",
@@ -364,9 +364,9 @@ const handleScan = async (e) => {
               Start for free — no credit card required. Upgrade when you need advanced threat intelligence.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link to="/quiz/general"
+              <Link to="/rolebased-trainings/general"
                 className="px-6 py-3 rounded-lg text-sm font-semibold text-gray-900 bg-green-400 hover:bg-green-300 transition-all duration-200 active:scale-95 shadow-lg shadow-green-900/30">
-                Take the quiz
+                Start training
               </Link>
               <Link to="/extension"
                 className="px-6 py-3 rounded-lg text-sm font-semibold text-green-400 border border-green-400/25 bg-green-400/5 hover:bg-green-400/10 transition-all duration-200 active:scale-95">
